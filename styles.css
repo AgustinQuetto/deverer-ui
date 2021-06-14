@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  color: #d7d7e6;
+  font-family: "Roboto", sans-serif;
+  background-color: #1e1e1e;
+}
+
+.layout {
+  display: flex;
+  min-height: 100%;
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  display: flex;
+  height: inherit;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigation-line {
+  border-left: 1px solid #3e3e42;
+  height: 100%;
+  margin-left: 1rem;
+}
+
+.menu {
+  background-color: #3e3e42;
+  list-style-type: none;
+  margin-top: 1rem;
+  padding: 12px;
+  font-size: 24px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 3px solid #303033;
+}
+
+.menu:hover {
+  background-color: #5d5d63;
+}
+
+.page {
+  background-color: #1e1e1e;
+  height: inherit;
+  padding: 1rem;
+  width: inherit;
+}
+
+.shortcuts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 800px;
+}
+
+.shortcut {
+  background-color: #3e3e42;
+  border-bottom: 3px solid #303033;
+  padding: 1rem;
+  margin-top: 1rem;
+  min-width: 160px;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.shortcut:hover {
+  background-color: #5d5d63;
+}
+
+.page section {
+  margin-top: 2rem;
+}
+
+.page section.what-you-can-do-today {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .page {
+    width: auto;
+  }
+
+  .layout {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  nav,
+  .navigation {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0px;
+    padding-bottom: 1rem;
+    width: 100vw;
+  }
+
+  .navigation img {
+    display: none;
+  }
+
+  .navigation-line {
+    display: none;
+  }
+}
