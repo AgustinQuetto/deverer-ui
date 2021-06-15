@@ -140,7 +140,10 @@ h1 {
       }
 
       .repositories {
-        margin-left: 1rem;
+        margin-left: 2rem;
+
+        @media (max-width: 1146px) {
+        }
       }
     }
   }
@@ -243,13 +246,31 @@ h1 {
     }
   }
 
-  button.small {
-    background-color: #3e3e42;
-    border: 1px solid #303033;
-    padding: 2px 8px 2px 8px;
-    border-radius: 1rem;
-    margin-top: 0.5rem;
-    color: #a7a7b4;
+  button {
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      filter: brightness(2);
+    }
+
+    &.small {
+      background-color: #3e3e42;
+      border: 1px solid #303033;
+      padding: 2px 8px 2px 8px;
+      border-radius: 1rem;
+      margin-top: 0.5rem;
+      color: #a7a7b4;
+      min-width: 35px;
+    }
+  }
+
+  .right {
+    float: right;
+  }
+
+  .space-0-5 {
+    margin-right: 0.5rem;
   }
 }
 

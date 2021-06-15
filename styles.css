@@ -133,7 +133,7 @@ h1 {
   margin-left: 0;
 }
 .layout .page .trendings .repositories {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 .layout .card {
   background-color: #2d2d2d;
@@ -224,6 +224,12 @@ h1 {
 .layout .card-repository ul li:hover {
   background-color: #5d5d63;
 }
+.layout button {
+  cursor: pointer;
+}
+.layout button.active, .layout button:hover {
+  filter: brightness(2);
+}
 .layout button.small {
   background-color: #3e3e42;
   border: 1px solid #303033;
@@ -231,6 +237,13 @@ h1 {
   border-radius: 1rem;
   margin-top: 0.5rem;
   color: #a7a7b4;
+  min-width: 35px;
+}
+.layout .right {
+  float: right;
+}
+.layout .space-0-5 {
+  margin-right: 0.5rem;
 }
 
 .arrow {
