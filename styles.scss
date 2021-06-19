@@ -23,8 +23,11 @@ h1 {
     background-color: #1e1e1e;
     padding: 1rem;
     display: flex;
+    position: fixed;
+    height: 100vh;
 
     @media (max-width: 768px) {
+      height: auto;
       position: fixed;
       display: flex;
       flex-direction: row;
@@ -83,11 +86,12 @@ h1 {
   .page {
     background-color: #1e1e1e;
     padding: 1rem;
-
+    margin-left: 105px;
     @media (max-width: 768px) {
       width: auto;
       height: 100%;
       padding-bottom: 130px;
+      margin-left: 0;
     }
 
     h1 {
