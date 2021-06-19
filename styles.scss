@@ -32,6 +32,7 @@ h1 {
       height: auto;
       padding: 0;
       border-top: 1px solid #3e3e42;
+      min-width: 100%;
     }
 
     .navigation {
@@ -46,7 +47,7 @@ h1 {
         justify-content: space-evenly;
         padding: 0px;
         padding-bottom: 1rem;
-        width: 100vw;
+        min-width: 100%;
         img {
           display: none;
         }
@@ -134,32 +135,38 @@ h1 {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      width: 100%;
 
       .threads {
         margin-left: 0;
+        width: 38%;
+        @media (max-width: 1280px) {
+          width: 100%;
+          margin-right: 0;
+        }
       }
 
-      .repositories {
-        margin-left: 2rem;
-
-        @media (max-width: 1146px) {
+      .repositories,
+      .qa {
+        width: 28%;
+        @media (max-width: 1280px) {
+          margin-top: 5rem;
+          width: 100%;
+          margin-right: 0;
         }
+      }
+
+      > div {
+        margin-right: 2%;
       }
     }
   }
 
-  .card {
+  .card-thread {
     background-color: #2d2d2d;
-    min-width: 550px;
-    max-width: 550px;
     padding: 16px;
     border-radius: 6px;
     border-bottom: 3px solid #303033;
-
-    @media (max-width: 550px) {
-      max-width: 550px;
-      min-width: 0px;
-    }
 
     .header {
       display: flex;
@@ -172,6 +179,7 @@ h1 {
 
       .author {
         margin-left: 1rem;
+        margin-top: -7px;
         h3 {
           margin: 0;
           line-height: 32px;
@@ -200,18 +208,11 @@ h1 {
     }
   }
 
-  .card-repository {
+  .card-text {
     background-color: #2d2d2d;
-    min-width: 350px;
-    max-width: 350px;
     padding: 16px;
     border-radius: 6px;
     border-bottom: 3px solid #303033;
-
-    @media (max-width: 350px) {
-      max-width: 350px;
-      min-width: 0px;
-    }
 
     h3 {
       margin: 0;
@@ -222,6 +223,12 @@ h1 {
       margin: 0;
       font-size: 12px;
       color: #a7a7b4;
+    }
+    small {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     ul {
       list-style: none;
