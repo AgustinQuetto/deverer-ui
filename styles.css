@@ -9,18 +9,19 @@ h1 {
   font-size: 36px;
 }
 
-.layout {
-  display: flex;
-  min-height: 100%;
-  width: 100%;
+h2 {
+  margin-top: 3rem;
 }
-@media (max-width: 768px) {
-  .layout {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+
+h3 {
+  margin-top: 2rem;
 }
-.layout nav {
+
+h4 {
+  margin-top: 2rem;
+}
+
+nav {
   background-color: #1e1e1e;
   padding: 1rem;
   display: flex;
@@ -28,7 +29,7 @@ h1 {
   height: 100vh;
 }
 @media (max-width: 768px) {
-  .layout nav {
+  nav {
     height: auto;
     position: fixed;
     display: flex;
@@ -40,13 +41,13 @@ h1 {
     z-index: 1;
   }
 }
-.layout nav .navigation {
+nav .navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media (max-width: 768px) {
-  .layout nav .navigation {
+  nav .navigation {
     height: auto;
     display: flex;
     flex-direction: row;
@@ -55,11 +56,14 @@ h1 {
     padding-bottom: 1rem;
     min-width: 100%;
   }
-  .layout nav .navigation img {
+  nav .navigation img {
     display: none;
   }
 }
-.layout nav .navigation .menu {
+nav .navigation img {
+  padding-bottom: 1rem;
+}
+nav .navigation .menu {
   background-color: #3e3e42;
   list-style-type: none;
   margin-top: 1rem;
@@ -72,154 +76,392 @@ h1 {
   text-align: center;
   cursor: pointer;
   border-bottom: 3px solid #303033;
+  color: #a0a0ac;
 }
-.layout nav .navigation .menu:hover {
+nav .navigation .menu:hover {
   background-color: #5d5d63;
 }
-.layout nav .navigation-line {
+nav .navigation .active {
+  filter: brightness(2);
+}
+nav .navigation-line {
   border-left: 1px solid #3e3e42;
   height: 100%;
   margin-left: 1rem;
 }
-.layout .page {
+
+button {
+  cursor: pointer;
+}
+button.active, button:hover {
+  filter: brightness(2);
+}
+button.small {
+  background-color: #3e3e42;
+  border: 1px solid #303033;
+  padding: 2px 8px 2px 8px;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  color: #a7a7b4;
+  min-width: 35px;
+}
+
+.trainee {
+  background-color: none;
+}
+
+.junior {
+  background-color: #29292c;
+}
+
+.semisenior {
+  background-color: #3b3b3e;
+}
+
+.senior {
+  background-color: #5c5c64;
+}
+
+.circles {
+  display: flex;
+  flex-direction: row;
+}
+.circles div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.page {
   background-color: #1e1e1e;
   padding: 1rem;
   margin-left: 105px;
 }
 @media (max-width: 768px) {
-  .layout .page {
+  .page {
     width: auto;
     height: 100%;
     padding-bottom: 130px;
     margin-left: 0;
   }
 }
-.layout .page h1 {
+.page h1 {
   margin-top: 0;
 }
-.layout .page section {
+.page section {
   margin-top: 2rem;
 }
-.layout .page .what-you-can-do-today {
-  margin-top: 1.5rem;
+.page .shortcuts div {
+  padding: 1rem;
 }
-.layout .page .what-you-can-do-today .shortcuts {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 800px;
-}
-.layout .page .what-you-can-do-today .shortcuts .shortcut {
+.page .shortcuts .shortcut {
   background-color: #3e3e42;
   border-bottom: 3px solid #303033;
   padding: 1rem;
-  margin-top: 1rem;
-  min-width: 160px;
   border-radius: 6px;
   text-align: center;
   cursor: pointer;
 }
-.layout .page .what-you-can-do-today .shortcuts .shortcut:hover {
+.page .shortcuts .shortcut:hover {
   background-color: #5d5d63;
 }
-@media (max-width: 414px) {
-  .layout .page .what-you-can-do-today .shortcuts .shortcut {
-    width: 100%;
-  }
-}
-.layout .page .trendings {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.layout .page .trendings .threads {
+
+.trendings .threads,
+.profile-information .threads {
   margin-left: 0;
-  width: 38%;
 }
 @media (max-width: 1280px) {
-  .layout .page .trendings .threads {
+  .trendings .threads,
+.profile-information .threads {
     width: 100%;
     margin-right: 0;
   }
 }
-.layout .page .trendings .repositories,
-.layout .page .trendings .qa {
+.trendings .repositories,
+.trendings .qa,
+.profile-information .repositories,
+.profile-information .qa {
   width: 28%;
 }
 @media (max-width: 1280px) {
-  .layout .page .trendings .repositories,
-.layout .page .trendings .qa {
+  .trendings .repositories,
+.trendings .qa,
+.profile-information .repositories,
+.profile-information .qa {
     margin-top: 5rem;
     width: 100%;
     margin-right: 0;
   }
 }
-.layout .page .trendings > div {
-  margin-right: 2%;
+
+h1 {
+  margin-bottom: 1rem;
 }
-.layout .card-thread {
+
+.timeline .title,
+.skills .title,
+.profile-threads .title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.timeline .title .circles,
+.skills .title .circles,
+.profile-threads .title .circles {
+  height: 70px;
+  margin-left: 1rem;
+}
+@media (max-width: 768px) {
+  .timeline .title .circles,
+.skills .title .circles,
+.profile-threads .title .circles {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+}
+.timeline .title div,
+.skills .title div,
+.profile-threads .title div {
+  align-items: flex-end;
+}
+.timeline h4,
+.skills h4,
+.profile-threads h4 {
+  margin-bottom: 0.5rem;
+}
+.timeline ul,
+.skills ul,
+.profile-threads ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0;
+  flex-wrap: wrap;
+  justify-content: end;
+  margin-top: 0;
+  margin-top: 2rem;
+}
+.timeline ul li,
+.skills ul li,
+.profile-threads ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 16px 4px 16px;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  max-width: 64px;
+  min-width: 64px;
+  margin-right: 1rem;
+}
+.timeline ul li i,
+.skills ul li i,
+.profile-threads ul li i {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+.timeline:first-child,
+.skills:first-child,
+.profile-threads:first-child {
+  margin-top: 1rem;
+}
+.timeline table,
+.skills table,
+.profile-threads table {
+  margin-left: 1rem;
+  border: none;
+  border-left: 2px solid #3e3e42;
+  border-left-style: dotted;
+}
+.timeline table tbody tr,
+.skills table tbody tr,
+.profile-threads table tbody tr {
+  padding-left: 1rem;
+  padding-top: 0;
+  vertical-align: top;
+}
+.timeline table tbody tr td:first-child,
+.skills table tbody tr td:first-child,
+.profile-threads table tbody tr td:first-child {
+  font-size: 1.2em;
+}
+.timeline table tbody tr td,
+.skills table tbody tr td,
+.profile-threads table tbody tr td {
+  padding: 1rem;
+  padding-bottom: 3rem;
+  padding-top: 0;
+}
+.timeline table tbody tr td:first-child,
+.skills table tbody tr td:first-child,
+.profile-threads table tbody tr td:first-child {
+  padding-top: 0;
+}
+.timeline table tbody tr td div,
+.skills table tbody tr td div,
+.profile-threads table tbody tr td div {
+  margin-top: 2rem;
+}
+.timeline table tbody tr td div p:first-child,
+.skills table tbody tr td div p:first-child,
+.profile-threads table tbody tr td div p:first-child {
+  margin-top: 0;
+}
+.timeline table tbody tr td div p:last-child,
+.skills table tbody tr td div p:last-child,
+.profile-threads table tbody tr td div p:last-child {
+  margin-bottom: 0;
+}
+.timeline table tbody tr td div:first-child,
+.skills table tbody tr td div:first-child,
+.profile-threads table tbody tr td div:first-child {
+  margin-top: 0px;
+}
+.timeline table tbody tr td.job-picture,
+.skills table tbody tr td.job-picture,
+.profile-threads table tbody tr td.job-picture {
+  padding-left: 2rem;
+  max-width: 48px;
+  min-width: 48px;
+  padding-right: 0;
+}
+.timeline table tbody tr td.job-picture:before,
+.skills table tbody tr td.job-picture:before,
+.profile-threads table tbody tr td.job-picture:before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #3e3e42;
+  background-color: #3e3e42;
+  position: absolute;
+  margin-left: -49px;
+  margin-top: -2px;
+  background-color: #1e1e1e;
+}
+.timeline table tbody tr td.job-description,
+.skills table tbody tr td.job-description,
+.profile-threads table tbody tr td.job-description {
+  font-size: 1em;
+}
+.timeline table tbody tr td.job-description div,
+.skills table tbody tr td.job-description div,
+.profile-threads table tbody tr td.job-description div {
+  margin-top: 2rem;
+}
+
+.profile-data img {
+  border-radius: 50%;
+  width: 200px;
+  height: auto;
+}
+.profile-data .social-networks ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 0;
+  width: 100%;
+  justify-content: center;
+}
+.profile-data .social-networks ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 8px 4px 8px;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  max-width: 64px;
+  min-width: 64px;
+}
+.profile-data .social-networks ul li i {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 1280px) {
+  .profile-information .name,
+.about-me .name {
+    text-align: center;
+  }
+}
+.profile-information p,
+.about-me p {
+  overflow-wrap: break-word;
+  max-width: 60ch;
+}
+
+.card-thread {
   background-color: #2d2d2d;
   padding: 16px;
   border-radius: 6px;
   border-bottom: 3px solid #303033;
 }
-.layout .card-thread .header {
+.card-thread .header {
   display: flex;
   flex-direction: row;
 }
-.layout .card-thread .header img {
+.card-thread .header img {
   width: 46px;
   height: 46px;
   border-radius: 50%;
 }
-.layout .card-thread .header .author {
+.card-thread .header .author {
   margin-left: 1rem;
   margin-top: -7px;
 }
-.layout .card-thread .header .author h3 {
+.card-thread .header .author h3 {
   margin: 0;
   line-height: 32px;
 }
-.layout .card-thread .header .author h5 {
+.card-thread .header .author h5 {
   line-height: 14px;
   margin: 0;
   font-size: 12px;
   color: #a7a7b4;
 }
-.layout .card-thread .content .arrow {
+.card-thread .content .arrow {
   float: right;
 }
-.layout .card-thread .content p:first-of-type {
+.card-thread .content p:first-of-type {
   margin-top: 1rem;
 }
-.layout .card-thread .content p:last-of-type {
+.card-thread .content p:last-of-type {
   margin-bottom: 0;
 }
-.layout .card-text {
+
+.card-text {
   background-color: #2d2d2d;
   padding: 16px;
   border-radius: 6px;
   border-bottom: 3px solid #303033;
 }
-.layout .card-text h3 {
+.card-text h3 {
   margin: 0;
   line-height: 32px;
 }
-.layout .card-text h5 {
+.card-text h5 {
   line-height: 14px;
   margin: 0;
   font-size: 12px;
   color: #a7a7b4;
 }
-.layout .card-text small {
+.card-text small {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.layout .card-text ul {
+.card-text ul {
   list-style: none;
   padding-left: 0;
   display: flex;
@@ -229,35 +471,22 @@ h1 {
   cursor: pointer;
   margin-top: 0;
 }
-.layout .card-text ul li {
+.card-text ul li {
   background-color: #3e3e42;
   border: 1px solid #303033;
   padding: 2px 8px 2px 8px;
   border-radius: 1rem;
   margin-top: 0.5rem;
 }
-.layout .card-text ul li:hover {
+.card-text ul li:hover {
   background-color: #5d5d63;
 }
-.layout button {
-  cursor: pointer;
-}
-.layout button.active, .layout button:hover {
-  filter: brightness(2);
-}
-.layout button.small {
-  background-color: #3e3e42;
-  border: 1px solid #303033;
-  padding: 2px 8px 2px 8px;
-  border-radius: 1rem;
-  margin-top: 0.5rem;
-  color: #a7a7b4;
-  min-width: 35px;
-}
-.layout .right {
+
+.right {
   float: right;
 }
-.layout .space-0-5 {
+
+.space-0-5 {
   margin-right: 0.5rem;
 }
 
@@ -266,6 +495,21 @@ h1 {
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
+}
+
+i:hover {
+  filter: brightness(2);
+}
+
+.input-h1 {
+  font-size: 36px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #d7d7e6;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

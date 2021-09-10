@@ -20,205 +20,204 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="flexboxgrid.min.css" />
+    <link rel="stylesheet" href="tooltip.css"/>
     <title>UI</title>
   </head>
   <body>
-    <section class="layout">
-      <nav>
-        <div class="navigation">
-          <img
-            src="https://image.flaticon.com/icons/svg/786/786795.svg"
-            width="54px"
-          />
-          <div class="menu"><span class="ec ec-house"></span></div>
-          <div class="menu"><span class="ec ec-mag"></span></div>
-          <div class="menu"><span class="ec ec-briefcase"></span></div>
-          <div class="menu"><span class="ec ec-speech-balloon"></span></div>
-          <div class="menu"><span class="ec ec-trophy"></span></div>
+    <nav>
+      <div class="navigation">
+        <img
+          src="https://image.flaticon.com/icons/svg/786/786795.svg"
+          width="54px"
+        />
+        <div class="menu"><i class="fas fa-home"></i></div>
+        <div class="menu"><i class="fas fa-search"></i></div>
+        <div class="menu active"><i class="fas fa-network-wired"></i></div>
+        <div class="menu"><i class="fas fa-comment"></i></div>
+        <div class="menu"><i class="fas fa-trophy"></i></div>
+      </div>
+      <div class="navigation-line"></div>
+    </nav>
+    <section class="page">
+      <h1>Hello Agustín <span class="ec ec-wave"></span></h1>
+      <section class="what-you-can-do-today">
+        <h3>What you can do today <span class="ec ec-nerd-face"></span></h3>
+        <div class="row shortcuts">
+          <div class="col-xs-12 col-md-3"><div class="shortcut">Complete challenges</div></div>
+          <div class="col-xs-12 col-md-3"><div class="shortcut">Find jobs</div></div>
+          <div class="col-xs-12 col-md-3"><div class="shortcut">Meet developers</div></div>
+          <div class="col-xs-12 col-md-3"><div class="shortcut">Read threads</div></div>
         </div>
-        <div class="navigation-line"></div>
-      </nav>
-      <section class="page">
-        <h1>Hello Agustín <span class="ec ec-wave"></span></h1>
-        <section class="what-you-can-do-today">
-          <h3>What you can do today <span class="ec ec-nerd-face"></span></h3>
-          <div class="shortcuts">
-            <div class="shortcut">Complete challenges</div>
-            <div class="shortcut">Find jobs</div>
-            <div class="shortcut">Meet developers</div>
-            <div class="shortcut">Read posts</div>
+      </section>
+        <h3>Your feed <span class="ec ec-sparkling-heart"></span></h3>
+        <section class="row">
+          <div class="col-xs-12 col-md-4">
+            Threads picked by community<span class="ec ec-thread"></span>
+            <button class="small">propose</button>
+            <section class="card-thread">
+              <div class="header">
+                <img
+                  src="https://avatars.githubusercontent.com/u/15186148?s=400&u=741b528368c6ea71b1c5ea17eb4b303ba31aa0df&v=4"
+                  class="avatar"
+                />
+                <div class="author">
+                  <h3>Agustín Quetto</h3>
+                  <small>@AQuetto</small>
+                </div>
+              </div>
+              <div class="content">
+                <p>Asincronía con ensaladas 🥗.</p>
+                <p>
+                  En este hilo les voy a explicar el concepto y cómo puede
+                  servirnos.
+                </p>
+                <p>
+                  ¿Qué es algo asincrónico? 🧐 Una acción que se realiza
+                  independientemente de que otra haya comenzado y terminado para
+                  comenzar. Pueden darse en paralelo.
+                </p>
+                <i class="arrow right"></i>
+              </div>
+            </section>
+            <section class="card-thread">
+              <div class="header">
+                <img
+                  src="https://avatars.githubusercontent.com/u/15186148?s=400&u=741b528368c6ea71b1c5ea17eb4b303ba31aa0df&v=4"
+                  class="avatar"
+                />
+                <div class="author">
+                  <h3>Agustín Quetto</h3>
+                  <small>@AQuetto</small>
+                </div>
+              </div>
+              <div class="content">
+                <p>Asincronía con ensaladas 🥗.</p>
+                <p>
+                  En este hilo les voy a explicar el concepto y cómo puede
+                  servirnos.
+                </p>
+                <p>
+                  ¿Qué es algo asincrónico? 🧐 Una acción que se realiza
+                  independientemente de que otra haya comenzado y terminado para
+                  comenzar. Pueden darse en paralelo.
+                </p>
+                <i class="arrow right"></i>
+              </div>
+            </section>
+            <section class="card-thread">
+              <div class="header">
+                <img
+                  src="https://avatars.githubusercontent.com/u/15186148?s=400&u=741b528368c6ea71b1c5ea17eb4b303ba31aa0df&v=4"
+                  class="avatar"
+                />
+                <div class="author">
+                  <h3>Agustín Quetto</h3>
+                  <small>@AQuetto</small>
+                </div>
+              </div>
+              <div class="content">
+                <p>Asincronía con ensaladas 🥗.</p>
+                <p>
+                  En este hilo les voy a explicar el concepto y cómo puede
+                  servirnos.
+                </p>
+                <p>
+                  ¿Qué es algo asincrónico? 🧐 Una acción que se realiza
+                  independientemente de que otra haya comenzado y terminado para
+                  comenzar. Pueden darse en paralelo.
+                </p>
+                <i class="arrow right"></i>
+              </div>
+            </section>
           </div>
-        </section>
-        <section>
-          <h3>Your feed <span class="ec ec-sparkling-heart"></span></h3>
-          <section class="trendings">
-            <div class="threads">
-              Threads picked by community<span class="ec ec-thread"></span>
-              <button class="small">propose</button>
-              <section class="card-thread">
-                <div class="header">
-                  <img
-                    src="https://pbs.twimg.com/profile_images/1347247003898699779/QmMqJ4qi_400x400.jpg"
-                    class="avatar"
-                  />
-                  <div class="author">
-                    <h3>Agustín Quetto</h3>
-                    <small>@AQuetto</small>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>Asincronía con ensaladas 🥗.</p>
-                  <p>
-                    En este hilo les voy a explicar el concepto y cómo puede
-                    servirnos.
-                  </p>
-                  <p>
-                    ¿Qué es algo asincrónico? 🧐 Una acción que se realiza
-                    independientemente de que otra haya comenzado y terminado
-                    para comenzar. Pueden darse en paralelo.
-                  </p>
-                  <i class="arrow right"></i>
-                </div>
-              </section>
-              <section class="card-thread">
-                <div class="header">
-                  <img
-                    src="https://pbs.twimg.com/profile_images/1347247003898699779/QmMqJ4qi_400x400.jpg"
-                    class="avatar"
-                  />
-                  <div class="author">
-                    <h3>Agustín Quetto</h3>
-                    <small>@AQuetto</small>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>Asincronía con ensaladas 🥗.</p>
-                  <p>
-                    En este hilo les voy a explicar el concepto y cómo puede
-                    servirnos.
-                  </p>
-                  <p>
-                    ¿Qué es algo asincrónico? 🧐 Una acción que se realiza
-                    independientemente de que otra haya comenzado y terminado
-                    para comenzar. Pueden darse en paralelo.
-                  </p>
-                  <i class="arrow right"></i>
-                </div>
-              </section>
-              <section class="card-thread">
-                <div class="header">
-                  <img
-                    src="https://pbs.twimg.com/profile_images/1347247003898699779/QmMqJ4qi_400x400.jpg"
-                    class="avatar"
-                  />
-                  <div class="author">
-                    <h3>Agustín Quetto</h3>
-                    <small>@AQuetto</small>
-                  </div>
-                </div>
-                <div class="content">
-                  <p>Asincronía con ensaladas 🥗.</p>
-                  <p>
-                    En este hilo les voy a explicar el concepto y cómo puede
-                    servirnos.
-                  </p>
-                  <p>
-                    ¿Qué es algo asincrónico? 🧐 Una acción que se realiza
-                    independientemente de que otra haya comenzado y terminado
-                    para comenzar. Pueden darse en paralelo.
-                  </p>
-                  <i class="arrow right"></i>
-                </div>
-              </section>
-            </div>
-            <div class="repositories">
-              Question & Answers<span class="ec ec-thread"></span>
-              <button class="small">publish</button>
-              <button class="small right">
-                <i class="fas fa-star"></i>
-              </button>
-              <button class="small right space-0-5 active">
-                <i class="fas fa-history"></i>
-              </button>
-              <section class="card-text">
-                <h3>How make collection like below image?</h3>
-                <small
-                  >I'm working on TableView, i need to make list like below.
-                  when i scroll i need same like below until last cell i tried
-                  with multiple scenarios using UITableView and UICollectionView
-                  with height.</small
-                >
-                <ul>
-                  <li>ios</li>
-                  <li>swift</li>
-                  <li>uitableview</li>
-                  <li>uicollectionview</li>
-                  <li>scrollview</li>
-                </ul>
-                <div class="content"></div>
-              </section>
-              <section class="card-text">
-                <h3>
-                  Add images dynamically to home page after inserting it in
-                  database
-                </h3>
-                <small>
-                  I am new to PHP and I am making a page for movies ( uni
-                  project ). I am making a system where the admin of the page
-                  can insert new movies and delete them. When the admin wants to
-                  insert a new movie.</small
-                >
-                <ul>
-                  <li>php</li>
-                  <li>html</li>
-                  <li>database</li>
-                  <li>image</li>
-                </ul>
-              </section>
-            </div>
-            <div class="repositories">
-              Trending repositories<span class="ec ec-thread"></span>
-              <button class="small">propose</button>
-              <button class="small right">
-                <i class="fas fa-users"></i>
-              </button>
-              <button class="small right space-0-5 active">
-                <i class="fab fa-github"></i>
-              </button>
-              <section class="card-text">
-                <h3>facebook/react</h3>
-                <small
-                  >A declarative, efficient, and flexible JavaScript library for
-                  building user interfaces.</small
-                >
-                <ul>
-                  <li>react</li>
-                  <li>javascript</li>
-                  <li>library</li>
-                  <li>ui</li>
-                  <li>frontend</li>
-                  <li>declarative</li>
-                </ul>
-                <div class="content"></div>
-              </section>
-              <section class="card-text">
-                <h3>godotengine/godot</h3>
-                <small>
-                  Godot Engine – Multi-platform 2D and 3D game engine</small
-                >
-                <ul>
-                  <li>open-source</li>
-                  <li>gamedev</li>
-                  <li>multi-platform</li>
-                  <li>game-engine</li>
-                  <li>game-development</li>
-                  <li>godotengine</li>
-                  <li>godot</li>
-                </ul>
-                <div class="content"></div>
-              </section>
-            </div>
-          </section>
+          <div class="col-xs-12 col-md-4">
+            Question & Answers<span class="ec ec-thread"></span>
+            <button class="small">publish</button>
+            <button class="small right">
+              <i class="fas fa-star"></i>
+            </button>
+            <button class="small right space-0-5 active">
+              <i class="fas fa-history"></i>
+            </button>
+            <section class="card-text">
+              <h3>How make collection like below image?</h3>
+              <small
+                >I'm working on TableView, i need to make list like below. when
+                i scroll i need same like below until last cell i tried with
+                multiple scenarios using UITableView and UICollectionView with
+                height.</small
+              >
+              <ul>
+                <li>ios</li>
+                <li>swift</li>
+                <li>uitableview</li>
+                <li>uicollectionview</li>
+                <li>scrollview</li>
+              </ul>
+              <div class="content"></div>
+            </section>
+            <section class="card-text">
+              <h3>
+                Add images dynamically to home page after inserting it in
+                database
+              </h3>
+              <small>
+                I am new to PHP and I am making a page for movies ( uni project
+                ). I am making a system where the admin of the page can insert
+                new movies and delete them. When the admin wants to insert a new
+                movie.</small
+              >
+              <ul>
+                <li>php</li>
+                <li>html</li>
+                <li>database</li>
+                <li>image</li>
+              </ul>
+            </section>
+          </div>
+          <div class="col-xs-12 col-md-4">
+            Trending repositories<span class="ec ec-thread"></span>
+            <button class="small">propose</button>
+            <button class="small right">
+              <i class="fas fa-users"></i>
+            </button>
+            <button class="small right space-0-5 active">
+              <i class="fab fa-github"></i>
+            </button>
+            <section class="card-text">
+              <h3>facebook/react</h3>
+              <small
+                >A declarative, efficient, and flexible JavaScript library for
+                building user interfaces.</small
+              >
+              <ul>
+                <li>react</li>
+                <li>javascript</li>
+                <li>library</li>
+                <li>ui</li>
+                <li>frontend</li>
+                <li>declarative</li>
+              </ul>
+              <div class="content"></div>
+            </section>
+            <section class="card-text">
+              <h3>godotengine/godot</h3>
+              <small>
+                Godot Engine – Multi-platform 2D and 3D game engine</small
+              >
+              <ul>
+                <li>open-source</li>
+                <li>gamedev</li>
+                <li>multi-platform</li>
+                <li>game-engine</li>
+                <li>game-development</li>
+                <li>godotengine</li>
+                <li>godot</li>
+              </ul>
+              <div class="content"></div>
+            </section>
+          </div>
         </section>
       </section>
     </section>
